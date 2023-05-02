@@ -19,6 +19,12 @@ ul {
     font-size: 1.3rem;
 }
 
+.header-txt-2 {
+    color: #555;
+    font-size: 1.14rem;
+    font-weight: 600;
+}
+
 
 .sub-header-txt {
     color: #777;
@@ -40,7 +46,9 @@ ul {
     justify-content: space-between;
 }
 
-
+.ai-center {
+    align-items: center;
+}
 
 .container {
     width: 88%;
@@ -174,15 +182,11 @@ nav {
 .main {
     margin-top: 1rem;
     display: flex;
-    gap: 1rem;
+    gap: 1.34rem;
 }
 
 .left, .right {
     flex: 1.5;
-}
-
-.right {
-    background: #0000001b;
 }
 
 .center {
@@ -243,7 +247,7 @@ nav {
     gap: .5rem;
     align-items: center;
     font-size: .84rem;
-    color: #454;
+    color: #666;
     padding: .5rem 0;
     font-weight: 500;
 }
@@ -296,4 +300,122 @@ hr {
 
 .s-1 {
     padding: 1rem 0 0;
+}
+
+.inner {
+    padding: 1rem 1.3rem;
+}
+
+.section-header-img {
+    width: 16px !important;
+}
+
+.news-container {
+    padding: 1.9rem 0 .9rem;
+}
+
+.news p {
+    color: #777;
+    font-size: .76rem;
+    font-weight: 700;
+    line-height: .66rem;
+
+}
+
+.news span {
+    font-size: .76rem;
+    color: #888;
+    font-weight: 500;
+}
+
+.news {
+    margin-bottom: .8rem;
+}
+
+.news:last-child {
+    margin-bottom: 0rem;
+}
+
+.more-btn a {
+    color: #0262d0;
+    font-size: .79rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.more-btn a:hover {
+    text-decoration: underline;
+}
+
+.ad-top-right {
+    text-align: right;
+    color: #606060;
+    font-size: .8rem;
+}
+
+.adv-main {
+    text-align: center;
+    flex-direction: column;
+    gap: .8rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.imgs img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.imgs img:last-child {
+    margin-left: .6rem;
+}
+
+.adv-main p {
+    font-size: .76rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.adv-main p:last-child {
+    font-size: .78rem;
+    color: #666;
+    font-weight: 700;
+}
+
+.adv-btn {
+    outline: none;
+    border: 2px solid #0262d0;
+    color: #0262d0;
+    border-radius: 18px;
+    padding: .3rem 1rem;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: .78rem;
+    margin-top: .6rem;
+    background: transparent;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.adv-btn:hover {
+    color: #fff;
+    background: #0262d0;
+}
+
+.footer-links {
+    padding: 1rem;
+    text-align: center;
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem .5rem; */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #777;
+    font-size: .85rem;
+    padding: 2rem .2rem;
+    font-weight: 500;
 }
