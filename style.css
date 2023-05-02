@@ -10,6 +10,10 @@
     --txt1-color: #555;
 }
 
+ul {
+    list-style: none;
+}
+
 .header-txt {
     color: #444;
     font-size: 1.3rem;
@@ -25,7 +29,7 @@
 .txt2 {
     color: #777;
     font-size: .94rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .flex {
@@ -100,9 +104,6 @@ nav {
 
 .nav-link li {
     list-style: none;
-    /* display: inline-block;
-    margin-left: 1rem; */
-
 }
 
 .nav-link li:first-child {
@@ -177,7 +178,6 @@ nav {
 }
 
 .left, .right {
-    /* background: #0000001b; */
     flex: 1.5;
 }
 
@@ -190,10 +190,6 @@ nav {
     flex: 3;
 }
 
-.left {
-    /* background: #fff; */
-}
-
 .section {
     background: #fff;
     border-radius: 5px;
@@ -201,7 +197,7 @@ nav {
 }
 
 .section-inner {
-    padding: 1rem 1.5rem;
+    padding: 0rem 1.5rem;
 }
 
 .cover-img img {
@@ -221,7 +217,6 @@ nav {
     flex-direction: column;
     gap: .3rem;
     padding-bottom: 1.2rem;
-    border-bottom: 1px solid #bab8b8;
 }
 
 .reviews p {
@@ -239,7 +234,7 @@ nav {
 .section-bottom {
 
     gap: 1rem;
-
+    margin-top: .2rem;
 }
 
 .section-bottom-inner {
@@ -255,9 +250,50 @@ nav {
 
 .section-bottom-inner img {
     width: 18px;
-    /* height: 19px; */
 }
 
 .section-bottom-inner:first-child {
     border-right: 1px solid #b2b2b2;
+}
+
+.listing img {
+    width: 20px;
+}
+
+.listing {
+    margin-top: .4rem;
+}
+
+.listing li {
+    gap: .6rem;
+    align-items: center;
+    font-size: .8rem;
+    color: #888;
+    font-weight: 500;
+    margin-bottom: .3rem;
+}
+
+.left-bottom {
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.left-bottom a {
+    color: #0838d4;
+    font-size: .8rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    padding: .8rem;
+}
+
+hr {
+    height: 1px;
+    background: rgb(207, 200, 200);
+    border: 0;
+}
+
+.s-1 {
+    padding: 1rem 0 0;
 }
