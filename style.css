@@ -225,6 +225,10 @@ nav {
     text-decoration: none;
 }
 
+.see-profile-link:hover {
+    text-decoration: underline;
+}
+
 .user-top-options {
     display: flex;
     flex-direction: column;
@@ -486,6 +490,7 @@ nav {
 .footer-reactions li {
     display: flex;
     align-items: center;
+    cursor: pointer;
     gap: .4rem;
 }
 
@@ -739,4 +744,88 @@ hr {
     font-size: .85rem;
     padding: 2rem .2rem;
     font-weight: 500;
+}
+
+
+
+
+/* ==================================================================================================================================== */
+/* ==================================================================================================================================== */
+/* ==================================================================================================================================== */
+
+
+/* profile page starts */
+
+.txt1 {
+    font-size: 2rem;
+    color: #5a5b5b;
+}
+
+.txt2 {
+    font-size: .9rem;
+    color: #8a8a8a;
+}
+
+.profile-inner-section {
+    padding: 1rem 1.5rem;
+}
+
+.profile-btns .btn-1:last-child {
+    margin-left: .8rem;
+}
+
+.btn-1 {
+    padding: .35rem .7rem;
+    font-family: inherit;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-1 i {
+    font-size: .9rem;
+}
+
+.conn-btn {
+    background: #0838d4;
+    color: #fff;
+}
+
+.msg-btn {
+    background: #2a2a2a25;
+    color: #3a3a3a;
+}
+
+.profile-main {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 85px;
+}
+
+.profile-left {
+    flex: 2.7;
+}
+
+.profile-right {
+    flex: 1;
+}
+
+.link-green {
+    color: #0883e8;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.connection-info {
+    display: flex;
+    gap: .5rem;
+    margin: .8rem 0;
+    font-size: .8rem;
+    font-weight: 500;
+    color: #777;
+}
+
+.connection-info img {
+    width: 25px;
+    border-radius: 50%;
 }
