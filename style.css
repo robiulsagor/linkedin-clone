@@ -69,6 +69,7 @@ nav {
     width: 100%;
     left: 0;
     top: 0;
+    z-index: 1000;
 }
 
 .nav-inner {
@@ -168,6 +169,7 @@ nav {
 
 .online {
     position: relative;
+    cursor: pointer;
 }
 
 .online::after {
@@ -182,17 +184,109 @@ nav {
     border-radius: 50%;
 }
 
+.user-dn {
+    position: absolute;
+    top: 50px;
+    width: 330px;
+    height: 0px;
+
+    right: 0px;
+    background: #000000e4;
+    border-radius: 6px;
+    /* padding: 1rem; */
+    color: #fff;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.user-dn.show {
+    height: 390px;
+}
+
+.user-dn-container {
+    padding: 1rem;
+}
+
+.user-dn-top {
+    display: flex;
+    gap: .5rem;
+    border-bottom: 2px solid #8a8989;
+    padding-bottom: .5rem;
+}
+
+.user-dn-user-img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.see-profile-link {
+    font-size: .8rem;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.user-top-options {
+    display: flex;
+    flex-direction: column;
+    /* gap: .2rem; */
+    padding-top: 1rem;
+}
+
+.user-top-options i {
+    font-size: .8rem;
+    color: #999;
+    /* font-weight: 500; */
+}
+
+.user-top-options li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+    padding: .8rem;
+    border-radius: 6px;
+
+}
+
+.user-top-options li:hover {
+    background: #fefcfc23;
+}
+
+.user-top-options-left {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.user-option-img {
+    width: 30px;
+}
+
+
 /* nav ends here */
 
 .main {
-    margin-top: 4.5rem;
+    margin-top: 80px;
     display: flex;
     gap: 1.34rem;
+    z-index: -1;
 }
 
 .left,
 .right {
     flex: 1.5;
+    position: sticky;
+    top: 80px;
+    align-self: flex-start;
+    height: calc(100vh - 80px);
+    overflow-y: scroll;
+    z-index: 5;
+}
+
+.left::-webkit-scrollbar,
+.right::-webkit-scrollbar {
+    display: none;
 }
 
 .center {
@@ -201,7 +295,6 @@ nav {
 
 
 .create-post-container {
-    /* background: #fff; */
     padding: .6rem 0 0;
     overflow: hidden;
 }
@@ -278,9 +371,143 @@ nav {
     font-weight: 500;
 }
 
+.sort-container {
+    text-align: right;
+    position: relative;
+    z-index: 10;
+    margin-top: -1rem;
+}
+
+.sort-container p {
+    font-size: .8rem;
+    font-weight: 500;
+    color: #888;
+    background: #f0f2f3;
+    display: inline-block;
+    padding: .4rem .5rem;
+}
+
+.sort-container span {
+    color: #666;
+    font-weight: 700;
+}
+
+.sort-container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: #bfbfbf;
+    z-index: -1;
+}
+
+
+/* POST styles */
+.post-top {
+    display: flex;
+    gap: .5rem;
+    align-items: start;
+}
+
+.post-top img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.post-user-name {
+    color: #525151;
+}
+
+.post-user-info {
+    font-size: .86rem;
+    color: #888;
+    font-weight: 500;
+}
+
+.post-body {
+    margin-top: 1rem;
+    margin-bottom: .4rem;
+}
+
+.post-txt {
+    font-size: .88rem;
+    color: #7a7a7a;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.post-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.reactions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .8rem;
+    font-weight: 500;
+    color: #777;
+}
+
+.reactions-left {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.reaction-imgs {
+    display: flex;
+    align-items: center;
+}
+
+.reaction-imgs img {
+    width: 15px;
+    margin-left: -.4rem;
+}
+
+.reaction-imgs img:first-child {
+    margin-left: 0rem;
+}
+
+/* post footer */
+.post-footer {
+    border-top: 1px solid #cdc0c0;
+}
+
+.footer-reactions {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 0;
+}
+
+.footer-reactions li {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.footer-reactions li span {
+    font-size: .87rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.reaction-img {
+    width: 20px;
+}
+
+.footer-pro-pic {
+    width: 25px;
+    border-radius: 50%;
+}
 
 
 
+
+/* POST styles ends */
 
 
 
@@ -298,6 +525,8 @@ nav {
 
 .cover-img img {
     width: 100%;
+    border-radius: 5px 5px 0 0;
+
 }
 
 .profile-pic {
