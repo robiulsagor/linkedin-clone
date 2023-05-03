@@ -65,6 +65,10 @@ nav {
     background: #fff;
     padding: .2rem 0;
     box-shadow: 0 0 10px #bebebe;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
 }
 
 .nav-inner {
@@ -83,7 +87,7 @@ nav {
 }
 
 .search-container {
-    background: #dadada;
+    background: #e8e7e7;
     display: flex;
     align-items: center;
     padding: .3rem .8rem;
@@ -151,7 +155,8 @@ nav {
     transition: width .3s;
 }
 
-.nav-link li a:hover::after, .nav-link li .active-link::after {
+.nav-link li a:hover::after,
+.nav-link li .active-link::after {
     width: 100%;
 }
 
@@ -180,19 +185,106 @@ nav {
 /* nav ends here */
 
 .main {
-    margin-top: 1rem;
+    margin-top: 4.5rem;
     display: flex;
     gap: 1.34rem;
 }
 
-.left, .right {
+.left,
+.right {
     flex: 1.5;
 }
 
 .center {
-    background: #ec13135d;
     flex: 3;
 }
+
+
+.create-post-container {
+    /* background: #fff; */
+    padding: .6rem 0 0;
+    overflow: hidden;
+}
+
+.create-post-top {
+    display: flex;
+    align-items: start;
+    padding: 1rem;
+    gap: .5rem;
+}
+
+.create-post-top img {
+    width: 35px;
+    border-radius: 50%;
+}
+
+.create-post-top textarea {
+    width: 100%;
+    height: 40px;
+    padding: .2rem;
+    font-family: Poppins;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    color: #666666;
+    resize: none;
+}
+
+.create-post-bottom {
+    border-top: 1px solid #e1cccc;
+    justify-content: space-between;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+}
+
+.create-post-bottom li {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    border-right: 1px solid #e1cccc;
+    text-align: center;
+    justify-content: center;
+    flex: 1;
+    padding: .7rem 0;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.create-post-bottom li:hover {
+    background: #0262d0;
+}
+
+.create-post-bottom li:hover span,
+.create-post-bottom li:hover i {
+    color: #fff;
+}
+
+.create-post-bottom li:last-child {
+    background: #0262d0;
+    cursor: auto;
+}
+
+.create-post-bottom li:last-child span {
+    color: #fff;
+}
+
+.create-post-bottom li img {
+    width: 15px;
+}
+
+.create-post-bottom li span {
+    font-size: .85rem;
+    color: #817f7f;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+/* ============ */
 
 .section {
     background: #fff;
