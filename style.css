@@ -541,6 +541,7 @@ nav {
     border: 4px solid #fff;
 }
 
+
 .reviews {
     margin: 1.4rem 0;
     margin-bottom: .3rem;
@@ -757,29 +758,64 @@ hr {
 /* profile page starts */
 
 .txt1 {
-    font-size: 2rem;
-    color: #5a5b5b;
+    font-size: 1.9rem;
+    color: #393939;
 }
 
 .txt2 {
-    font-size: .9rem;
-    color: #8a8a8a;
+    font-size: 1rem;
+    color: #7e7d7d;
+}
+
+.txt3 {
+    font-size: .98rem;
+    color: #878686;
+    font-weight: 500;
+    padding-top: .1rem;
+}
+
+.profile-section-header-txt {
+    font-size: 1.5rem;
+    color: #393939;
+}
+
+.about-txt {
+    font-size: 1.04rem;
+    color: #6a6a6a;
+    margin-top: 1.1rem;
+}
+
+.about-txt span {
+    /* font-size: 1.04rem;
+    color: #6a6a6a;
+    margin-top: 1.1rem; */
+    text-align: right;
+    display: block;
+}
+
+.profile-pic.profile-top {
+    width: 150px !important;
+    margin-top: -110px;
 }
 
 .profile-inner-section {
-    padding: 1rem 1.5rem;
+    padding: 1.5rem 2.3rem;
 }
 
 .profile-btns .btn-1:last-child {
     margin-left: .8rem;
 }
 
-.btn-1 {
+.conn-btn,
+.msg-btn {
     padding: .35rem .7rem;
     font-family: inherit;
     border: none;
-    border-radius: 5px;
+    border-radius: 3.5px;
+    color: #fff;
+    cursor: pointer;
     font-size: 1rem;
+    transition: color, background .3s;
 }
 
 .btn-1 i {
@@ -787,13 +823,22 @@ hr {
 }
 
 .conn-btn {
-    background: #0838d4;
-    color: #fff;
+    background: #1446eb;
+}
+
+.conn-btn:hover {
+    background: #2a2a2a25;
+    color: #333;
 }
 
 .msg-btn {
     background: #2a2a2a25;
     color: #3a3a3a;
+}
+
+.msg-btn:hover {
+    background: #1446eb;
+    color: #f1eaea;
 }
 
 .profile-main {
@@ -811,16 +856,16 @@ hr {
 }
 
 .link-green {
-    color: #0883e8;
-    font-weight: 600;
+    color: #0f3eda;
+    font-weight: 500;
     text-decoration: none;
 }
 
 .connection-info {
     display: flex;
     gap: .5rem;
-    margin: .8rem 0;
-    font-size: .8rem;
+    margin: 1.25rem 0;
+    font-size: 1rem;
     font-weight: 500;
     color: #777;
 }
@@ -828,4 +873,13 @@ hr {
 .connection-info img {
     width: 25px;
     border-radius: 50%;
+}
+
+.experience li {
+    display: flex;
+    align-items: start;
+}
+
+.experience-img {
+    width: 40px;
 }
