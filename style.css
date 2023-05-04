@@ -63,7 +63,7 @@ body {
 
 nav {
     background: #fff;
-    padding: .2rem 0;
+    /* padding: .5rem 0; */
     box-shadow: 0 0 10px #bebebe;
     position: fixed;
     width: 100%;
@@ -81,6 +81,12 @@ nav {
 .nav-left {
     display: flex;
     gap: 1rem;
+}
+
+.nav-left a {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 .logo {
@@ -138,17 +144,17 @@ nav {
 }
 
 .nav-link li {
+    padding: 1rem 0;
     padding-right: .4rem;
-}
-
-.nav-link li a {
     position: relative;
 }
 
-.nav-link li a:after {
+/* .nav-link li a {} */
+
+.nav-link li:after {
     content: "";
     position: absolute;
-    bottom: -12px;
+    bottom: 0;
     left: 0;
     width: 0;
     height: 2px;
@@ -156,8 +162,8 @@ nav {
     transition: width .3s;
 }
 
-.nav-link li a:hover::after,
-.nav-link li .active-link::after {
+.nav-link li:hover::after,
+.nav-link li.active-link::after {
     width: 100%;
 }
 
@@ -170,6 +176,9 @@ nav {
 .online {
     position: relative;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .online::after {
@@ -454,6 +463,7 @@ nav {
     font-size: .8rem;
     font-weight: 500;
     color: #777;
+    flex-wrap: wrap;
 }
 
 .reactions-left {
@@ -478,6 +488,7 @@ nav {
 
 /* post footer */
 .post-footer {
+
     border-top: 1px solid #cdc0c0;
 }
 
@@ -485,6 +496,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: .5rem 0;
+    flex: 1;
 }
 
 .footer-reactions li {
@@ -737,6 +749,8 @@ hr {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 1rem .5rem; */
+
+    /* margin-top: -2rem; */
 }
 
 .footer-links a {
@@ -877,8 +891,7 @@ hr {
 .profile-main {
     display: flex;
     gap: 1.5rem;
-    margin-top: 85px;
-    margin-bottom: 40px;
+    margin-top: 75px;
 }
 
 .profile-left {
@@ -887,6 +900,15 @@ hr {
 
 .profile-right {
     flex: 1;
+    align-self: flex-start;
+    position: sticky;
+    top: 75px;
+    height: calc(100vh - 85px);
+    overflow: auto;
+}
+
+.profile-right::-webkit-scrollbar {
+    display: none;
 }
 
 .link-green {
@@ -938,7 +960,7 @@ hr {
 }
 
 .show-all-btn {
-    border-top: 1px solid #979797;
+    border-top: 1px solid #bababa;
     text-align: center;
 }
 
@@ -947,6 +969,7 @@ hr {
     text-decoration: none;
     color: #555;
     padding: 1.5rem 0 0;
+    font-weight: 500;
 }
 
 .skills {
@@ -982,6 +1005,10 @@ hr {
     padding: .4rem 1rem;
     font-size: .81rem;
     border-radius: 2px;
+}
+
+.people-know {
+    /* padding: ; */
 }
 
 .people-header-txt {
@@ -1032,7 +1059,6 @@ hr {
     padding-left: 0;
 }
 
-
 .footer-logo {
     width: 20px;
 }
@@ -1044,4 +1070,377 @@ hr {
     display: flex;
     align-items: center;
     gap: .6rem;
+}
+
+.main-body {
+    margin-bottom: 1.5rem;
+}
+
+#showMoreLink {
+    display: none;
+}
+
+/* =================  */
+/* ============= media queries  ============*/
+/* =================  */
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .container {
+        width: 98%;
+    }
+
+    .txt1 {
+        font-size: 1.7rem;
+        color: #393939;
+    }
+
+    .txt2 {
+        font-size: .9rem;
+        color: #7e7d7d;
+    }
+
+    .txt3 {
+        font-size: .98rem;
+        color: #878686;
+        font-weight: 500;
+        padding-top: .1rem;
+    }
+
+    .txt4 {
+        font-size: 1.08rem;
+        color: #585858;
+        padding-top: 0 !important;
+        margin-top: -5px !important;
+    }
+
+    .txt5 {
+        font-size: .95rem;
+        color: #606060;
+        font-weight: 500;
+    }
+
+    .txt6 {
+        font-weight: 500;
+        color: #6a6a6a;
+    }
+
+    .txt7 {
+        font-size: .85rem;
+        color: #777;
+    }
+
+    .profile-section-header-txt {
+        font-size: 1.3 rem;
+        color: #393939;
+        padding: 1rem 0 0;
+    }
+
+    .experience-txt {
+        color: #7b7878;
+        font-weight: 500;
+        margin-top: .9rem;
+    }
+
+    .about-txt {
+        font-size: 1.04rem;
+        color: #6a6a6a;
+        margin-top: 1.1rem;
+    }
+
+    .about-txt .see-more {
+        text-align: right;
+        display: block;
+        font-size: .9rem;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .right {
+        display: none;
+    }
+
+    .search-container {
+
+        background: transparent;
+    }
+
+    .search-container input {
+        display: none;
+    }
+
+    .profile-left {
+        flex: 2;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-link {
+        gap: 2rem;
+    }
+
+    .nav-link li span {
+        display: none;
+    }
+
+    .footer-reactions li span {
+        display: none;
+    }
+
+    .section-inner {
+        padding: 0rem .5rem;
+    }
+
+    .profile-inner-section {
+        padding: 1.5rem 1.3rem;
+    }
+
+    .txt1 {
+        font-size: 1.4rem;
+        color: #393939;
+    }
+
+    .txt2 {
+        font-size: .85rem;
+        color: #7e7d7d;
+    }
+
+    .txt3 {
+        font-size: .8rem;
+        color: #878686;
+        font-weight: 500;
+        padding-top: .1rem;
+    }
+
+    .txt4 {
+        font-size: 1.08rem;
+        color: #585858;
+        padding-top: 0 !important;
+        margin-top: -5px !important;
+    }
+
+    .txt5 {
+        font-size: .95rem;
+        color: #606060;
+        font-weight: 500;
+    }
+
+    .txt6 {
+        font-weight: 500;
+        color: #6a6a6a;
+    }
+
+    .txt7 {
+        font-size: .85rem;
+        color: #777;
+    }
+
+    .profile-section-header-txt {
+        font-size: 1.3rem;
+        color: #393939;
+        padding: 1rem 0 0;
+    }
+
+    .experience-txt {
+        color: #7b7878;
+        font-weight: 500;
+        margin-top: .9rem;
+        font-size: .86rem;
+    }
+
+    .about-txt {
+        font-size: .9rem;
+        color: #6a6a6a;
+        margin-top: 1.1rem;
+    }
+
+    .profile-main {
+        flex-direction: column;
+    }
+
+    .profile-right {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+
+    .top-user-img {
+        width: 30px;
+    }
+
+    .logo {
+        width: 25px;
+    }
+
+    .search-container {
+        gap: 0;
+        background: transparent;
+        width: auto;
+        padding: 0;
+    }
+
+    .search-container input {
+        width: 0;
+        padding: 0;
+    }
+
+    .nav-link {
+        gap: .55rem;
+    }
+
+
+    .nav-link li {
+        padding: .4rem 0;
+    }
+
+    .nav-link li a span {
+        display: none;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+
+    .main {
+        flex-direction: column;
+        margin-top: 56px;
+    }
+
+    .left,
+    .right {
+        flex: 1;
+        position: relative;
+        top: unset;
+        align-self: flex-start;
+        height: auto;
+        overflow-y: scroll;
+        z-index: 50;
+    }
+
+    .center {
+        flex: 1;
+    }
+
+    .inner {
+        padding: 1rem .5rem .22rem;
+    }
+
+    .reactions {
+        flex-wrap: wrap;
+        gap: .35rem;
+    }
+
+    /* .footer-reactions li span {
+        display: none;
+    } */
+
+    #showMoreLink {
+        display: block;
+        text-align: center;
+        font-size: .94rem;
+    }
+
+    .sidebar-activity {
+        display: none;
+    }
+
+    .sidebar-activity.show {
+        display: block;
+    }
+
+    /* profile page */
+    .profile-main {
+        flex-direction: column;
+    }
+
+    .profile-left,
+    .profile-right {
+        flex: 1;
+        width: 100%;
+    }
+
+    .profile-inner-section {
+        padding: 1.5rem 1rem 1rem;
+    }
+
+    .txt1 {
+        font-size: 1.55rem;
+    }
+
+    .txt2 {
+        font-size: .86rem;
+    }
+
+    .txt3 {
+        font-size: .8rem;
+
+    }
+
+    .connection-info {
+        gap: .5rem;
+        font-size: .94rem;
+    }
+
+    .profile-section-header-txt {
+        font-size: 1.3rem;
+        padding: 0;
+    }
+
+    .about-txt {
+        font-size: .9rem;
+        margin-top: 1rem;
+    }
+
+    .txt4 {
+        font-size: 1.07rem;
+        margin-top: -5px !important;
+    }
+
+    .txt5 {
+        font-size: .87rem;
+    }
+
+    .experience-txt {
+        margin-top: 1rem;
+        font-size: .82rem;
+    }
+
+    .show-all-btn a {
+        padding: .8rem 0 0rem;
+        font-size: .84rem;
+    }
+
+    .skills {
+        gap: .5rem;
+        margin-top: .4rem;
+    }
+
+    .skills li {
+        padding: .4rem .9rem;
+        font-size: .76rem;
+    }
+
+    .section-listing li:last-child .experience-info {
+        border-bottom: none;
+        padding-bottom: 0rem;
+    }
+
+    .languages {
+        margin-top: 1rem;
+    }
+
+    .people-know {
+        padding: 1rem;
+    }
+
+
 }

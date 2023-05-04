@@ -22,3 +22,20 @@ document.addEventListener("click", e => {
         user_dropdown.classList.remove("show")
     }
 })
+
+// show sidebar on click
+const showMoreLink = document.getElementById("showMoreLink")
+const sideBarActivity = document.querySelector(".sidebar-activity")
+const plusOrMinus = document.getElementById("plusOrMinus")
+
+showMoreLink.addEventListener("click", () => {
+
+    sideBarActivity.classList.toggle("show")
+
+    if (sideBarActivity.classList.contains("show")) {
+        showMoreLink.innerHTML = "Show Less <b>-</b>"
+    } else {
+        showMoreLink.innerHTML = "Show More <b>+</b>"
+
+    }
+})
